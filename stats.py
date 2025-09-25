@@ -19,8 +19,8 @@ def sort_on(items):
 def sorted_char_list(file):
     dict = get_char_count(file)
     dict_list = []
-    for key in dict.keys():
-        dict_list.append({"char": key, "num": dict.get(key)})
+    for key, value in dict.items():
+        dict_list.append({"char": key, "num": value})
 
     dict_list.sort(reverse=True, key=sort_on)
     return dict_list
